@@ -9,6 +9,7 @@ YBIGTA 사이언스 팀 자연어처리 스터디
 * [Adversarial Multi-task Learning for Text Classification](https://arxiv.org/abs/1704.05742) 
 * [Sequence to Sequence Learning with Neural Networks](https://arxiv.org/abs/1409.3215)
 * [Text Understanding with the Attention Sum Reader Network](https://arxiv.org/abs/1603.01547) 
+* [Attention is All You Need](https://arxiv.org/pdf/1706.03762.pdf)
 * [Deep Contextualized Word Representations](https://arxiv.org/abs/1802.05365)
 * [Improving Language Understanding by Generative Pre-Training](https://pdfs.semanticscholar.org/cd18/800a0fe0b668a1cc19f2ec95b5003d0a5035.pdf?_ga=2.40131109.647956165.1588658157-925505706.1588658157)
 * [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](https://arxiv.org/abs/1810.04805)
