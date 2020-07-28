@@ -17,7 +17,7 @@ tensor([[0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000, 0.5000,
 </pre>
 
 * #### Negative Log Likelihood loss
-$$ l_n = -w_{y_n}x_{n,y_n}, \nobreakspace w_c = weight[c] * 1 )\{c \neq \textnormal{ignore\_index}\}$$
+$$ l_n = -w_{y_n}x_{n,y_n}, w_c = weight[c] * 1 )\{c \neq \textnormal{ignore\_index}\}$$
 weight defaults to 1s
 <pre><code>F.nll_loss(inp, target)
 </code></pre>
