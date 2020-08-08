@@ -90,7 +90,7 @@ $$ L^{(j+1)} = p(\hat{A}L^{(j)}W_{j})$$
 two layers of GCN with ReLU : second layer node (word + document) embeddings have the same size as the labels set + softmax
 
 
-
+<!-- 
 [gradient accumulation in tensorflow](https://stackoverflow.com/questions/59893850/how-to-accumulate-gradients-in-tensorflow-2-0)
 
 
@@ -108,4 +108,4 @@ trainable_variables = self.model.trainable_variables
                     grad_accumulation = [grad_i / self.args.gradient_accumulation_steps for grad_i in grad_accumulation]
                     self.optimizer.apply_gradients(zip(grad_accumulation, trainable_variables))
                     train_losses.append(total_loss)
-                    total_loss = 0
+                    total_loss = 0 -->
