@@ -27,4 +27,4 @@ Little notes on the general machine learning topic
 Implementation of Graph Convolutional Network in [TextGCN](https://arxiv.org/abs/1809.05679)
 
 *libraries*
-    * tensorflow==2.1.0
+  * tensorflow==2.1.0
