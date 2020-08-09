@@ -15,7 +15,7 @@ Graph Neural Networks are semi-supervised learning method that applies neural ne
 ### Graph Structure
 * Graphs \
 Data is modelled as graphs
-$$G = (V, E)$$
+<img src="https://render.githubusercontent.com/render/math?math=G = (V, E)">
 
 * Vertices \
 Each node contains a vector representation of an object 
