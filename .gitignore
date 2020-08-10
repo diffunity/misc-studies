@@ -130,6 +130,9 @@ dmypy.json
 
 
 # ignore
+RecommenderSystem/others
+RecommenderSystem/Notes.ipynb
+
 GNN/data/
 GNN/draft.ipynb
 GNN/Graph Neural Networks.md
