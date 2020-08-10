@@ -1,9 +1,13 @@
-## Loss Functions
+# Loss Functions
 > import libraries
 <pre><code>import torch
 import torch.nn.functional as F
 import tensorflow as tf
+from tensorflow.keras.metric import *
+import tensorfflow.keras.backend as B
 </code></pre>
+
+## Pytorch
 
 > variable setting
 <pre><code>target = torch.tensor([1,2,3])
@@ -96,3 +100,41 @@ F.kl_div(torch.log_softmax(inp, 1), one_hot, reduction="batchmean")
 
 <pre>(tensor(2.3026), tensor(2.3026), tensor(2.3026))
 </pre>
+
+## Tensorflow
+
+> variable setting
+
+``` python
+target = tf.convert_to_tensor([1,2,3])
+inp = tf.fill((target.shape[0],10),0.5)
+target, inp
+```
+
+```
+(<tf.Tensor: shape=(3,), dtype=int32, numpy=array([1, 2, 3], dtype=int32)>,
+ <tf.Tensor: shape=(3, 10), dtype=float32, numpy=
+ array([[0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+        [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5],
+        [0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5]], dtype=float32)>)
+```
+
+* #### Categorical Cross Entropy
+
+> variable setting for CategoricalCrossEntropy
+<pre><code>one_hot = tf.one_hot(target, inp.shape[1], axis=-1)
+</code></pre>
+
+```
+<tf.Tensor: shape=(3, 10), dtype=float32, numpy=
+array([[0., 1., 0., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 1., 0., 0., 0., 0., 0., 0., 0.],
+       [0., 0., 0., 1., 0., 0., 0., 0., 0., 0.]], dtype=float32)>
+```
+
+<pre><code>loss = tf.keras.losses.CategoricalCrossentropy()(one_hot, inp)
+</code></pre>
+
+```
+<tf.Tensor: shape=(), dtype=float32, numpy=2.3025851>
+```

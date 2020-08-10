@@ -131,3 +131,5 @@ dmypy.json
 
 # ignore
 GNN/data/
+GNN/draft.ipynb
+GNN/Graph Neural Networks.md
