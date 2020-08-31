@@ -1,6 +1,7 @@
+# From https://github.com/tkipf/gcn/blob/master/gcn/metrics.py
 import tensorflow as tf
 
-
+@tf.function
 def masked_softmax_cross_entropy(preds, labels, mask):
     """Softmax cross-entropy loss with masking."""
     loss = tf.nn.softmax_cross_entropy_with_logits(logits=preds, labels=labels)

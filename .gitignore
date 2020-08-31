@@ -130,11 +130,7 @@ dmypy.json
 
 
 # ignore
-YBIGTA-NLP-study/projects/data
-
 RecommenderSystem/others
 RecommenderSystem/Notes.ipynb
 
-GNN/data/
-GNN/draft.ipynb
-GNN/Graph Neural Networks.md
+GNN/GAT/keras-gat

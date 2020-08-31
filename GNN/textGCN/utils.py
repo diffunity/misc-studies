@@ -1,3 +1,4 @@
+# Modified from https://github.com/tkipf/gcn/blob/master/gcn/utils.py
 import numpy as np
 import pickle as pkl
 import networkx as nx
@@ -204,7 +205,8 @@ def preprocess_features(features):
     r_inv[np.isinf(r_inv)] = 0.
     r_mat_inv = sp.diags(r_inv)
     features = r_mat_inv.dot(features)
-    return sparse_to_tuple(features)
+    return features
+    # return sparse_to_tuple(features)
 
 
 def normalize_adj(adj):
@@ -214,13 +216,15 @@ def normalize_adj(adj):
     d_inv_sqrt = np.power(rowsum, -0.5).flatten()
     d_inv_sqrt[np.isinf(d_inv_sqrt)] = 0.
     d_mat_inv_sqrt = sp.diags(d_inv_sqrt)
-    return adj.dot(d_mat_inv_sqrt).transpose().dot(d_mat_inv_sqrt).tocoo()
+    return adj.dot(d_mat_inv_sqrt).transpose().dot(d_mat_inv_sqrt)
+    # return adj.dot(d_mat_inv_sqrt).transpose().dot(d_mat_inv_sqrt).tocoo()
 
 
 def preprocess_adj(adj):
     """Preprocessing of adjacency matrix for simple GCN model and conversion to tuple representation."""
     adj_normalized = normalize_adj(adj + sp.eye(adj.shape[0]))
-    return sparse_to_tuple(adj_normalized)
+    return adj_normalized
+    # return sparse_to_tuple(adj_normalized)
 
 
 def construct_feed_dict(features, support, labels, labels_mask, placeholders):
