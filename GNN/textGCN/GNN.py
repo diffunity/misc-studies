@@ -101,7 +101,6 @@ class TextGCN:
     def evaluate(self, X, y, test_mask):
         return masked_accuracy(self.model(X), y, test_mask)
 
-
 def run(args):
     (
         adj,
@@ -158,7 +157,6 @@ def run(args):
     eval_result = model_textGCN.evaluate(features_dense, y_test, test_mask)
 
     print(f"Final Evaluation Result: {eval_result}")
-
 
 if __name__ == "__main__":
 
