@@ -1,37 +1,51 @@
-# misc-studies
-Studies on various Deep Learning topics
+# Miscellaneous Studies
+Studies and implementations of various Deep Learning topics
 
 
-## **GNN**
-Implementation of Graph Convolutional Network in [TextGCN](https://arxiv.org/abs/1809.05679) \
-Implementation of Graph Attention Network in [GAT](https://arxiv.org/pdf/1710.10903.pdf)
+## GNN
+* Implementation of Graph Convolutional Network in [TextGCN](https://arxiv.org/abs/1809.05679) using tensorflow
 
-*libraries*
-* tensorflow
-* scipy
+| libraries |
+| --------- |
+| tensorflow |
+| scipy     |
 
-## **machine-learning**
-Little notes on the general machine learning topics
+</br>
+</br>
 
-## **Recommender System**
-Studies on RecSys topics in YBIGTA (student club) \
-Mini-project applying autoencoders for collaborative filtering
+## Machine Learning
+* Notes on the general machine learning topics
+* Implementation of simple backpropagation using numpy
+* Implementation of label smoothing loss in pytorch
 
-*libraries*
-- tensorflow
+</br>
+</br>
 
-## **YBIGTA-RL**
-Studies on Reinforcement Learning in YBIGTA (student club) \
-Mini tutorial on a simple implementation of q-learning
+## Recommender System
+* Implementation of autoencoders for collaborative filtering
 
-*libraries*
-- numpy
-- OpenAI gym
+|libraries|
+| ------ |
+|tensorflow|
 
-## **YBIGTA-NLP-study**
-Studies on NLP topics in YBIGTA (student club) \
-Mini-project applying fasttext pretrained word embeddings on text classification
+</br>
+</br>
 
-*libraries*
-- tensorflow
-- gensim
+## Reinforcement Learning
+* Simple implementation of q-learning using numpy
+
+|libraries|
+| ------ |
+| numpy |
+| OpenAI gym |
+
+</br>
+</br>
+
+## NLP
+* Mini-project applying fasttext pretrained word embeddings on text classification
+
+|libraries|
+| ------ |
+| tensorflow |
+| gensim |
